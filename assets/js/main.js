@@ -8,6 +8,36 @@ $(document).on('click','.form-cancel', function(){
 });
 
 
+$(window).on('load', function () {
+
+  var $projects = $('#isotope-container');
+
+  $projects.isotope({
+      itemSelector: '.item',
+      layoutMode: 'fitRows'
+  });
+
+
+  //filter items on button click
+  $('#isotope-filter').on('click', 'button', function () {
+
+      //get filter value
+      var rafi = $(this).attr('data-filter');
+
+      //filter protfolio
+      $projects.isotope({
+          filter: rafi,
+      });
+
+      //active button
+      $('#isotope-filter').find('.active').removeClass('active');
+      $(this).addClass('active');
+
+  });
+});
+
+
+
 // Slick Slider For Testimonial Section
 $('.testimonial-slider').slick({
     autoplay: true,
