@@ -458,6 +458,37 @@ article{
     background: #fff;
     padding: 20px;
 }
+#isotope-filter{
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+#isotope-filter button {
+    text-transform: uppercase;
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    font-family: "Raleway-bold";
+    font-weight: 700;
+    font-size: 14px;
+    padding-right: 25px;
+    outline: 0;
+
+}
+
+#isotope-filter button span {
+    display: block;
+    -webkit-transition: border-color .4s ease-in-out;
+    transition: border-color .4s ease-in-out;
+}
+
+#isotope-filter button.active span {
+    color: var(--theme-color);
+    border-bottom: 2px solid var(--theme-color);
+
+}
 @keyframes fade{
 	0%{
 		opacity: 0;
